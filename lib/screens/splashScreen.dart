@@ -1,9 +1,6 @@
+import 'package:ai_job_matcher/screens/sign_in_screen.dart';
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'chat_screen.dart';
-
-
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -16,12 +13,14 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-          child: FlutterSplashScreen.gif(
-            duration: Duration(milliseconds: 3000), defaultNextScreen: ChatScreen(),
-            gifPath: 'assets/logo.jpeg',
-            gifWidth: 200,
-            gifHeight: 100,
-          ),),
+        child: FlutterSplashScreen.gif(
+          duration: Duration(milliseconds: 3000),
+          defaultNextScreen: SignIn(),
+          gifPath: 'assets/logo.jpeg',
+          gifWidth: 200,
+          gifHeight: 100,
+        ),
+      ),
     );
   }
 }

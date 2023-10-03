@@ -1,4 +1,5 @@
 import 'package:ai_job_matcher/constants/contactcolors.dart';
+import 'package:ai_job_matcher/screens/chat_screen.dart';
 import 'package:ai_job_matcher/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -123,6 +124,11 @@ class _SignInState extends State<SignIn> {
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
                                 // Navigate the user to the Home page
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ChatScreen()));
                               } else {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(

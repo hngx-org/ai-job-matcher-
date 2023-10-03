@@ -12,16 +12,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    var getMaterialApp = GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Job Matcher',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home:  SplashScreen(),
-
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      //   useMaterial3: true,
+      // ),
+      home: SplashScreen(),
     );
+    return getMaterialApp;
   }
 }
-

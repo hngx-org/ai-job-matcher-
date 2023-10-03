@@ -20,7 +20,6 @@ class _ChatScreenState extends State<ChatScreen> {
   late TextEditingController textEditingController;
   final ScrollController _scrollController = ScrollController();
 
-
   @override
   void initState() {
     textEditingController = TextEditingController();
@@ -44,7 +43,6 @@ class _ChatScreenState extends State<ChatScreen> {
     });
     print('Button clicked');
 
-
     /// Scroll to the new message
     _scrollController.animateTo(
       _scrollController.position.extentTotal,
@@ -61,13 +59,13 @@ class _ChatScreenState extends State<ChatScreen> {
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
-              onTap: () => Get.to(Profile(
-                    userProfilePicture: userProfilePicture,
-                  )),
-              child: CircleAvatar(
-                  backgroundImage: AssetImage(userProfilePicture),
-                radius: 18,
-              ),
+            onTap: () => Get.to(Profile(
+              userProfilePicture: userProfilePicture,
+            )),
+            child: CircleAvatar(
+              backgroundImage: AssetImage(userProfilePicture),
+              radius: 18,
+            ),
           ),
         ),
         title: const Text("Ai Job Matcher"),
@@ -86,7 +84,7 @@ class _ChatScreenState extends State<ChatScreen> {
           children: [
             Flexible(
               child: ListView.builder(
-                controller: _scrollController,
+                  controller: _scrollController,
                   itemCount: chatMessages.length,
                   itemBuilder: (context, index) {
                     return ChatWidget(
@@ -114,9 +112,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         child: TextField(
                           style: const TextStyle(color: Colors.white),
                           controller: textEditingController,
-                          onSubmitted: (value) {
-                            // TODO send message
-                          },
+                          onSubmitted: (value) {},
                           decoration: const InputDecoration.collapsed(
                               hintText: "How can I help you",
                               hintStyle: TextStyle(color: Colors.grey)),

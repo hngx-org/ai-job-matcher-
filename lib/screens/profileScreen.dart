@@ -1,3 +1,4 @@
+import 'package:ai_job_matcher/inapp_payment/models/payment.model.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -103,7 +104,14 @@ class _ProfileState extends State<Profile> {
             SizedBox(height: 40,), LargeBottomButton(
               function: (){},
                 text: "Upload",
-                color: Colors.blue[900])
+                color: Colors.blue[900]),
+            SizedBox(height: 20,),
+            LargeBottomButton(
+              function: (){
+                Get.to(PaymentView());
+              },
+                text: "Subscribe",
+                color: Colors.blue[900]),
           ],
         ),
       ),

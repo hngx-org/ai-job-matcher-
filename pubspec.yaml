@@ -43,6 +43,7 @@ dependencies:
   get: ^4.6.6
   another_flutter_splash_screen:
   hng_authentication: ^0.1.2
+  pay: ^1.1.2
   
 
 dev_dependencies:
